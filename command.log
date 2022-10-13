@@ -1,0 +1,218 @@
+    1  printenv > /tmp/tmp-275EN6gJ0OT7psFtxt
+    2  df -kh
+    3  cd /mnt/s
+    4  ls
+    5  ll
+    6  which apt-get
+    7  which code
+    8  cd demo1/
+    9  ll
+   10  ls -ltrh
+   11  sudo apt-get update
+   12  apt-get upgrade
+   13  sudo apt-get upgrade
+   14  wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
+   15  ll
+   16  view adult.data 
+   17  which pip 
+   18  ll
+   19  df -kh
+   20  touch demo.txt
+   21  sudo touch demo.txt
+   22  df -kh
+   23  cd /mnt/s/
+   24  ls -ltrh
+   25  cd demo1/
+   26  ls -ltrh
+   27  touch abc.txt
+   28  ll
+   29  vi abc.txt 
+   30  which python
+   31  which wget
+   32  which python3
+   33  ll
+   34  pwd
+   35  which python
+   36  which apt-get
+   37  apt-get update
+   38  sudo apt-get update
+   39  which wget
+   40  sudo apt-get upgrade
+   41  which python
+   42  apt-get install python
+   43  sudo apt-get install python
+   44  which yum
+   45  sudo apt-get install yum
+   46  sudo apt-get install vncserver
+   47  df -kh
+   48  sudo apt-get install rhythmbox
+   49  sudo apt install mysql-server
+   50  sudo systemctl start mysql.service
+   51  sudo mysql
+   52  mysql
+   53  ls /etc/my.cnf
+   54  ls /etc/mysql/
+   55  cd /etc
+   56  ls -ltr
+   57  ls -ltr mysql/
+   58  cd mysql.conf.d
+   59  ls -ltrh
+   60  cd mysql/
+   61  ls -ltrh
+   62  cd mysql.conf.d
+   63  ls -ltrh
+   64  cd /var/lib
+   65  cd mysql
+   66  sudo cd mysql
+   67  ls -ltr mysql
+   68  ls -ltrh
+   69  sudo mysql
+   70  cd /etc/
+   71  ls *my*
+   72  cd mysql/
+   73  ls -ltrh
+   74  ls -ltr /etc/my.cnf
+   75  service mysql status
+   76  service mysql start
+   77  mysql -u root -p
+   78  ls -ltr  /etc/init.d/mysql
+   79  cat  /etc/init.d/mysql
+   80  ls -ltr /var/log/mysql/error.log
+   81  cat /var/log/mysql/error.log
+   82  sudo service mysql start
+   83  service mysql status
+   84  sudo service mysql start
+   85  cat /var/log/mysql/error.log
+   86  mysql
+   87  sudo mysql
+   88  pip install mysql-connector-python
+   89  sudo apt install python3-pip
+   90  pip install mysql-connector-python
+   91  which mysql-connector-python
+   92  pip install mysql-connector-python
+   93  df -kh
+   94  cd /mnt/s
+   95  cd demo1/
+   96  ll
+   97  ls -lt
+   98  vi python_test.py
+   99  ls -lt
+  100  python3 python_test.py 
+  101  sudo mysql
+  102  sudo mysql -u demo1 -p easypass
+  103  sudo mysql -u demo1 -p
+  104  sudo mysql
+  105  ll
+  106  vi python_test.py 
+  107  python3 python_test.py 
+  108  vi python_test.py 
+  109  python3 python_test.py 
+  110  cat python_test.py
+  111  exit
+  112  df -kh
+  113  cd /mnt/s
+  114  ls -lt
+  115  cd demo1/
+  116  pwd
+  117  whcih python3
+  118  which python3
+  119  sudo mysql
+  120  service mysql status
+  121  sudo service mysql start
+  122  sudo mysql
+  123  df -kh
+  124  cd /mnt/s
+  125  vi arr_test.sh
+  126  ./arr_test.sh 
+  127  vi arr_test.sh
+  128  ./arr_test.sh 
+  129  cat arr_test.sh 
+  130  arr=( "apple" "banana" "cherry" )
+  131  for item in "${arr[@]}"; do     echo $item; done
+  132  myarray=["abc" "xyz"]
+  133  myarray=("abc" "xyz")
+  134  for i in ${myarray[@]};do echo ${myarray[$i]} ; done
+  135  for i in "${myarray[@]}"; do echo ${myarray[$i]}; done
+  136  for i in "${!myarray[@]}"; do echo ${myarray[$i]}; done
+  137  for i in "${myarray[@]}"; do echo $i; done
+  138  vi shell_arg.sh
+  139  ./shell_arg.sh 
+  140  ./shell_arg.sh saad
+  141  vi shell_arg.sh
+  142  ./shell_arg.sh SAad
+  143  vi shell_arg.sh
+  144  ./shell_arg.sh 
+  145  ./shell_arg.sh SAAD
+  146  ./shell_arg.sh saad
+  147  cat shell_arg.sh 
+  148  vi shell_arg.sh 
+  149  ./shell_arg.sh saad
+  150  vi shell_arg.sh 
+  151  ./shell_arg.sh saad
+  152  cat shell_arg.sh 
+  153  pwd
+  154  ls -ltrh
+  155  df -kh
+  156  cd /mnt/s
+  157  cd demo1/
+  158  ls -ltrh
+  159  '
+
+
+
+
+
+  160  ll
+  161  python3 python_test.py 
+  162  sudo service mysql start
+  163  service mysql status
+  164  python3 python_test.py 
+  165  ls -lt
+  166  pip list csvkit
+  167  pip install csvkit
+  168  which csvkit
+  169  wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
+  170  ls -ltrh | grep adult
+  171  head adult.data
+  172  csvcut -n adult.data
+  173  wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test
+  174  csvcut -n adult.test
+  175  head 
+  176  head adult.test 
+  177  wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names
+  178  head adult.names
+  179  view adult.names 
+  180  rm -rf adult.names 
+  181  wget https://archive.ics.uci.edu/ml/machine-learning-databases/adult/old.adult.names
+  182  head old.adult.names
+  183  view old.adult.names 
+  184  rm -rf old.adult.names 
+  185  ls -ltr
+  186  rm -rf adult.data.1 
+  187  ls -ltrh
+  188  csvcut -n adult.data 
+  189  view adult.data 
+  190  csvcut -c 1,3 adult.data 
+  191  csvcut -c 1,3 adult.data |tail -10
+  192  csvcut -c 1,3 adult.data |head -10
+  193  view adult.data 
+  194  vi us_eco.csv
+  195  ls -ltrh
+  196  head us_eco.csv 
+  197  csvcut -n us_eco.csv
+  198  csvcut -c 2,5,6 us_eco.csv
+  199  csvcut -c Workclass,Race,Sex us_eco.csv 
+  200  csvcut -c Age,Race,Sex us_eco.csv | csvlook | head
+  201  csvcut -c Age,Race,Sex us_eco.csv | csvlook | tail
+  202  csvcut -c Age,Race,Sex us_eco.csv | csvlook | tail -5
+  203  grep -i "Doctorate" us_eco.csv | grep -i "Husband" | grep -i "Black" | csvlook | head -5
+  204  grep -i "Bachelors" us_eco.csv | grep -i "Husband" | grep -i "Black" | csvlook | head -5
+  205  csvcut -c Age,Race,Sex us_eco.csv | csvlook | tail -5
+  206  grep -i "Doctorate" us_eco.csv | csvlook | tail
+  207  grep -i "Bachelors" us_eco.csv | csvlook | tail
+  208  grep -i "Bachelors" us_eco.csv | grep -i "Husband" | csvlook
+  209  grep -i "Bachelors" us_eco.csv | wc -l
+  210  csvcut -c Age,Race,Sex us_eco.csv | csvstat
+  211  awk -F, '{print $1,$2}' us_eco.csv | head
+  212  history
+  213  history > command.log

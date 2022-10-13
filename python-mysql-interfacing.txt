@@ -1,0 +1,115 @@
+$ sudo apt-get install python3
+$ sudo apt mysql-server
+$ service mysql status
+$ sudo service mysql start x2
+$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.30-0ubuntu0.20.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql>
+mysql> create user 'demo1'@'localhost' identified by 'easypass';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'demo1'@'localhost' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.29 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> SHOW GRANTS FOR 'demo1'@'localhost';
+mysql>
+mysql> CREATE DATABASE testDB;
+Query OK, 1 row affected (0.22 sec)
+mysql>
+mysql> USE testDB
+Database changed
+mysql>
+mysql>
+mysql> CREATE TABLE Persons (
+    ->     PersonID int,
+    ->     LastName varchar(255),
+    ->     FirstName varchar(255),
+    ->     Address varchar(255),
+    ->     City varchar(255)
+    -> );
+Query OK, 0 rows affected (2.27 sec)
+mysql>
+mysql> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (001, 'Saad', 'abc',  'A-091', 'Dellas');
+Query OK, 1 row affected (0.21 sec)
+
+mysql> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (002, 'Neesh', 'spark', 'B-081', 'Texas');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> INSERT INTO Persons (PersonID, LastName, Address, City) VALUES (003, 'Ram', 'C-091', 'Chicago');
+Query OK, 1 row affected (0.21 sec)
+
+mysql> INSERT INTO Persons (PersonID, LastName, FirstName, Address, City) VALUES (004, 'Shyam', 'abc', 'U-071', 'London');
+Query OK, 1 row affected (0.18 sec)
+
+mysql>
+mysql>
+mysql> select * from Persons;
++----------+----------+-----------+---------+---------+
+| PersonID | LastName | FirstName | Address | City    |
++----------+----------+-----------+---------+---------+
+|        1 | Saad     | abc       | A-091   | Dellas  |
+|        2 | Neesh    | spark     | B-081   | Texas   |
+|        3 | Ram      | NULL      | C-091   | Chicago |
+|        4 | Shyam    | abc       | U-071   | London  |
++----------+----------+-----------+---------+---------+
+4 rows in set (0.00 sec)
+
+mysql>exit
+Bye
+
+$ pip install mysql-connector-python
+Collecting mysql-connector-python
+  Downloading mysql_connector_python-8.0.30-cp38-cp38-manylinux1_x86_64.whl (25.4 MB)
+     |████████████████████████████████| 25.4 MB 28 kB/s
+Collecting protobuf<=3.20.1,>=3.11.0
+  Downloading protobuf-3.20.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+     |████████████████████████████████| 1.0 MB 5.0 MB/s
+Installing collected packages: protobuf, mysql-connector-python
+Successfully installed mysql-connector-python-8.0.30 protobuf-3.20.1
+
+$ vi python_test.py
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+          host="localhost",
+          database='testDB',
+          user='demo1',
+          password='easypass'
+              )
+
+print(mydb)
+print("Congrats DB object created")
+
+
+mycursor = mydb.cursor()
+
+mycursor.execute("select PersonID from Persons")
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+    print(x)
+
+
+#mydb.commit()
+
+
+$ python3 python_test.py
+<mysql.connector.connection_cext.CMySQLConnection object at 0x7f499c1367c0>
+Congrats DB object created
+(1,)
+(2,)
+(3,)
+(4,)
